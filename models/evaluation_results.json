@@ -1,0 +1,71 @@
+{
+  "positive_class": "spam",
+  "selection_method": "cross-validated spam precision on training set only",
+  "results": {
+    "naive_bayes": {
+      "test_metrics": {
+        "accuracy": 0.971953578336557,
+        "precision": 1.0,
+        "recall": 0.7786259541984732,
+        "f1": 0.8755364806866953,
+        "confusion_matrix": {
+          "tn_ham_as_ham": 903,
+          "fp_ham_as_spam": 0,
+          "fn_spam_as_ham": 29,
+          "tp_spam_as_spam": 102
+        }
+      },
+      "tuning": {
+        "best_params": {
+          "alpha": 1.0,
+          "fit_prior": true
+        },
+        "cv_precision_spam": 1.0
+      }
+    },
+    "logistic_regression": {
+      "test_metrics": {
+        "accuracy": 0.9564796905222437,
+        "precision": 0.9777777777777777,
+        "recall": 0.6717557251908397,
+        "f1": 0.7963800904977375,
+        "confusion_matrix": {
+          "tn_ham_as_ham": 901,
+          "fp_ham_as_spam": 2,
+          "fn_spam_as_ham": 43,
+          "tp_spam_as_spam": 88
+        }
+      },
+      "tuning": {
+        "best_params": {
+          "C": 1,
+          "class_weight": null
+        },
+        "cv_precision_spam": 0.9935963114754098
+      }
+    },
+    "svm": {
+      "test_metrics": {
+        "accuracy": 0.9796905222437138,
+        "precision": 0.9508196721311475,
+        "recall": 0.8854961832061069,
+        "f1": 0.9169960474308301,
+        "confusion_matrix": {
+          "tn_ham_as_ham": 897,
+          "fp_ham_as_spam": 6,
+          "fn_spam_as_ham": 15,
+          "tp_spam_as_spam": 116
+        }
+      },
+      "tuning": {
+        "best_params": {
+          "estimator__C": 1,
+          "estimator__class_weight": null
+        },
+        "cv_precision_spam": 0.9621978209056861
+      }
+    }
+  },
+  "best_model": "naive_bayes",
+  "reasoning": "'naive_bayes' was selected using 5-fold cross-validated spam-precision on the TRAINING set only (1.000), before the test set was touched. Its final, one-time test evaluation confirms precision=1.000 and f1=0.876, which is reported here as an unbiased estimate of real-world performance -- not as the basis for the selection."
+}

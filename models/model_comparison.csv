@@ -1,0 +1,4 @@
+model,accuracy,precision(spam),recall(spam),f1(spam),false_positives,false_negatives,"cv_precision(train, tuned)",best_params
+naive_bayes,0.972,1.0,0.7786,0.8755,0,29,1.0,"{'alpha': 1.0, 'fit_prior': True}"
+logistic_regression,0.9565,0.9778,0.6718,0.7964,2,43,0.9936,"{'C': 1, 'class_weight': None}"
+svm,0.9797,0.9508,0.8855,0.917,6,15,0.9622,"{'estimator__C': 1, 'estimator__class_weight': None}"
